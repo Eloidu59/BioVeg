@@ -54,6 +54,10 @@ body {
     margin-right: 30px;
   }
   
+  .subthemes a{
+    padding-left: 10px;
+
+  }
   #main {
     padding: 16px;
     margin-left: 85px;

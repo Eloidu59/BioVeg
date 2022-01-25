@@ -4,7 +4,7 @@ const app = express();
 const fs= require("fs");
 const path= require("path");
 const{response}=require("express");
-//const io = require(socket.io)
+//const io = require(socket.io)(http)
 
 app.use(express.static(__dirname + '/views'));
 
@@ -15,15 +15,19 @@ app.listen(3000, () => {
 
 
 app.get("/", (request, response) => {
-    response.sendFile(__dirname + "/views/index.html");
+    response.sendFile(__dirname + "/views/html/index.html");
 
 });
 
 app.get("/quiz", (request, response) => {
-    response.sendFile(__dirname + "/views/quiz1.html");
+    response.sendFile(__dirname + "/views/html/quiz1.html");
 
 });
 
+app.get("/textrou", (request, response) => {
+    response.sendFile(__dirname + "/views/html/textrou.html");
+
+});
 
 
 

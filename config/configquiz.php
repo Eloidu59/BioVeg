@@ -6,7 +6,7 @@ if (isset($_GET['plante'])) {
 
         include('configbdd.php');
 
-        $query = $bdd->prepare('SELECT * FROM plante WHERE id_plante = :id_plante');
+        $query = $bdd->prepare('SELECT * FROM plante WHERE i');
         $query->bindValue(':id_plante', $plante, PDO::PARAM_INT);
         $query->execute();
         $dataP = $query->rowCount();

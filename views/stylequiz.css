@@ -1,23 +1,83 @@
 /* En ce qui concerne le quiz */
 
 * {
-    font-family : 'Josefin Sans', sans-serif;
-    box-sizing : border-box;
+    font-family: 'Exo', sans-serif;
+    /* box-sizing : border-box; 
     margin : 0;
-    padding : 0;
+    padding : 0; */
     text-align : center;
-  }
+}
 
-  body {
+body {
       display :grid;
       align-items : center;
       justify-items : center;
       min-height : 100vh;
-      background : black;
-      color: white;
-  } 
+      background : white;
+      color: black;
+} 
 
-  h1 {
+h1 {
+      font-family: 'Exo', sans-serif;
       margin-bottom : 2rem;
-      text-
-  }
+      text-transform : uppercase;
+      font-size : 3rem;
+}
+
+span, i {
+      color : #A1CF6B;
+}
+
+h3 {
+      color : black;
+      font-size : 1.5rem;
+}
+
+.choices {
+      display : flex;
+      flex-wrap : wrap;
+      margin : 3rem auto 3rem;
+      width : 500px;
+}
+
+button {
+    flex : 1 0 45%;
+    width : 200px;
+    height : 80px;
+    border-radius : 5px;
+    cursor : pointer;
+    border : none;
+    margin : .4rem;
+    outline : none;
+    background : #285943;
+    user-select : none;
+    font-weight : 600;
+    transition-duration: .5s;
+    color:white;
+}
+
+.btn:hover {
+    background : #A1CF6B;
+    transform : scale(0.95);
+    transition-duration : .5s;
+}
+
+.btn:hover:active {
+    background : #bcf17f;
+    transform: scale(1.05);
+    transition-duration : .1s;
+}
+
+p {
+    font-size : 1.3rem;
+}
+
+#progress {
+    font-size : 1.3rem;
+    color : #285943;
+    font-weight: bold;
+    /*background: #A1CF6B;*/
+    border:4px solid #E0C879;
+    border-radius:.7rem;
+    padding:.5rem 1rem;
+}
