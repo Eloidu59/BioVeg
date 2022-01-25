@@ -14,16 +14,18 @@ nunjucks.configure("views", {
 
 
 //connexion au serveur
-app.listen(4000, () => {
+app.listen(3000, () => {
     console.log(`Server successfully started on http: /localhost:3000`)
    });
 
 
-app.get("/lol", (request, response) => {
+app.get("/", (request, response) => {
     response.send("OK");
-    console.log(`Server successfully`)
+    response.render("....")
 
 });
+
+
 
 
 
