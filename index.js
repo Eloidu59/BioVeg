@@ -1,19 +1,12 @@
 
-
 const express = require("express");
 const app = express();
-const nunjucks = require("nunjucks");
 const fs= require("fs");
 const path= require("path");
 const{response}=require("express");
+//const io = require(socket.io)
 
-nunjucks.configure("views", {
-    autoescape: true,
-    express: app
-   });
-   app.set("view engine", "njk");
-
-
+app.use(express.static(__dirname + '/views'));
 
 //connexion au serveur
 app.listen(3000, () => {
@@ -22,11 +15,14 @@ app.listen(3000, () => {
 
 
 app.get("/", (request, response) => {
-    response.render("accueil")
+    response.sendFile(__dirname + "/views/index.html");
 
 });
 
+app.get("/quiz", (request, response) => {
+    response.sendFile(__dirname + "/views/quiz1.html");
 
+});
 
 
 

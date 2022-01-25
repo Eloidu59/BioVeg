@@ -12,10 +12,7 @@ if (isset($_GET['plante'])) {
         $dataP = $query->rowCount();
         $bdd = NULL;
 
-        if ($dataP != 0) {
-            header('Location: ../mon_compte.php?share='.$plante.'#mes-messages');
-        }else {header('Location: ../affichage_erreur.php?erreur=73');}
-    }else {header('Location: ../index.php');}
+
 }
 
 
