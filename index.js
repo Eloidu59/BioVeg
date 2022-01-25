@@ -1,12 +1,52 @@
-
-const express = require("express");
+const express = require('express');
+const path = require('path');
 const app = express();
-const fs= require("fs");
-const path= require("path");
-const{response}=require("express");
-//const io = require(socket.io)(http)
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
+
 
 app.use(express.static(__dirname + '/views'));
+
+//Connexion a la BDD
+/*io.on('connection', (socket) => {
+    console.log('connexion faite')
+    socket.on('chapitres',()=> {
+        
+        const con = mysql.createConnection({
+        host: "eductseaqfbioveg.mysql.db",
+        user: "eductseaqfbioveg",
+        password : "BiovegCNB3",
+        database : "eductseaqfbioveg"
+        });
+
+    
+        let sql= 'SELECT * FROM `themes`';
+        
+        con.query(sql, (err,chap)=>{
+            if (err) throw err;
+            socket.emit('retourchapitres',chap);
+
+            
+        });
+
+        
+    }); 
+
+
+});
+
+*/
+
+io.on("connection", (socket) => {
+    socket.emit("hello", "world");
+  });
+  
+  /* client-side
+  socket.on("hello", (arg) => {
+    console.log(arg); // world
+  });
+*/
+
 
 //connexion au serveur
 app.listen(3000, () => {
