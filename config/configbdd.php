@@ -1,9 +1,9 @@
 <?php
 
-$servername = 'localhost';
-$dbname = 'vnb';
-$username = 'root';
-$password = '';
+$servername = 'eductseaqfbioveg.mysql.db';
+$dbname = 'eductseaqfbioveg';
+$username = 'eductseaqfbioveg';
+$password = 'BiovegCNB3';
 
 //On essaie de se connecter
 try{
