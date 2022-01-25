@@ -7,22 +7,40 @@ const io = require('socket.io')(http);
 
 app.use(express.static(__dirname + '/views'));
 
+//connection à la BDD
+
+var mysql = require('mysql')
+const con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password : "",
+    database : "eductseaqfbioveg",
+    });
+
+con.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
+    });
+
+    let requete= 'SELECT * FROM `themes`';
+    con.query(requete, (err,chap)=>{
+        if (err) throw err;
+        
+        
+        console.log(chap[1].nom)
+    });
+    
+
 //Connexion a la BDD
 /*io.on('connection', (socket) => {
     console.log('connexion faite')
     socket.on('chapitres',()=> {
         
-        const con = mysql.createConnection({
-        host: "eductseaqfbioveg.mysql.db",
-        user: "eductseaqfbioveg",
-        password : "BiovegCNB3",
-        database : "eductseaqfbioveg"
-        });
-
     
-        let sql= 'SELECT * FROM `themes`';
+    
+        let requete= 'SELECT * FROM `themes`';
         
-        con.query(sql, (err,chap)=>{
+        con.query(requete, (err,chap)=>{
             if (err) throw err;
             socket.emit('retourchapitres',chap);
 
@@ -34,8 +52,8 @@ app.use(express.static(__dirname + '/views'));
 
 
 });
-
 */
+
 
 io.on("connection", (socket) => {
     socket.emit("hello", "world");
