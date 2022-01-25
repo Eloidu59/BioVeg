@@ -1,4 +1,4 @@
-<?php include('config/configbdd.php');?>
+
 
 const express = require("express");
 const app = express();
