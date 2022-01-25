@@ -21,7 +21,7 @@ app.listen(3000, () => {
 
 app.get("/", (request, response) => {
     response.send("OK");
-    response.render("....")
+    response.render("accueil")
 
 });
 
