@@ -1,4 +1,4 @@
-import express from "express";
+const express = require("express");
 const app = express();
 const nunjucks = require("nunjucks");
 const fs= require("fs");
@@ -20,7 +20,6 @@ app.listen(3000, () => {
 
 
 app.get("/", (request, response) => {
-    response.send("OK");
     response.render("accueil")
 
 });
