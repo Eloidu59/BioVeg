@@ -1,3 +1,9 @@
+//requete bdd
+
+
+
+
+
 var mini=true;
 function toggleSidebar() {
   if (mini) {

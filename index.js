@@ -22,37 +22,27 @@ con.connect(function(err) {
     console.log("Connected!");
     });
 
-    let requete= 'SELECT * FROM `themes`';
-    con.query(requete, (err,chap)=>{
-        if (err) throw err;
-        
-        
-        console.log(chap[1].nom)
-    });
+
     
 
 //Connexion a la BDD
-/*io.on('connection', (socket) => {
+io.on('connection', (socket) => {
     console.log('connexion faite')
     socket.on('chapitres',()=> {
-        
     
     
         let requete= 'SELECT * FROM `themes`';
         
         con.query(requete, (err,chap)=>{
             if (err) throw err;
+            console.log(chap[1].nom)
             socket.emit('retourchapitres',chap);
 
             
         });
-
-        
     }); 
-
-
 });
-*/
+
 
 
 io.on("connection", (socket) => {
