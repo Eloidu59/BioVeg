@@ -15,62 +15,19 @@
     
     
     <body>
-        <div id="sidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
-            <h2><i class="fas fa-bars"></i></h2>
-                <div class="category" id="dropAngio">
-                    <a href="#" class="themes">Angiospermes</a>
-                   <!---- <div class="subthemesCtn" id="dropAngioCtn">
-                        <a class="subthemes" href="/quiz">Quizs</a>
-                        <a class="subthemes" href="#">Mots croisés</a>
-                        <a class="subthemes" href="#">Textes à trous</a>
-                    </div><br>
-                -->
-                </div>
 
-                <div class="category" id="dropGymno">
-                   <a href="#" class="themes">Gymnospermes</a>
-                   <!---- <div class="subthemesCtn" id="dropGymnoCtn">
-                        <a class="subthemes" href="#">Quizs</a>
-                        <a class="subthemes" href="#">Mots croisés</a>
-                        <a class="subthemes" href="#">Textes à trous</a>
-                    </div><br>
-                -->
-                </div>
-
-                <div class="category" id="dropFoug">
-                    <a href="#" class="themes">Fougères</a>
-                 <!----   <div class="subthemesCtn" id="dropFougCtn">
-                        <a class="subthemes" href="#">Quizs</a>
-                        <a class="subthemes" href="#">Mots croisés</a>
-                        <a class="subthemes" href="#">Textes à trous</a>
-                    </div><br> 
-                -->
-                </div>
-
-                <div class="category" id="dropAn">
-                    <a href="#" class="themes">Annales</a>
-                 <!----  <div class="subthemesCtn" id="dropAnCtn">
-                        <a class="subthemes" href="#">2020</a>
-                        <a class="subthemes" href="#">2021</a>
-                        <a class="subthemes" href="#">2022</a>
-                    </div><br>
-
-                -->
-                </div>
-
-            </div>
             
             <div id="main">
                 <div>
-                    <p> <h1> Vegeta'learn </h1> </p>
+                    <a href="/"> <h1> Vegeta'learn </h1> </a>
                 </div>
 
                 <label>Entrez vos identifiants</label>
 
                 <form id="login-form">
-                    <input type="text" name="username" id="username" class="login-form-field" placeholder="Username">
+                    <input type="email" name="username" id="username" class="login-form-field" placeholder="Username">
                     <input type="password" name="password" id="password" class="login-form-field" placeholder="Password">
-                    <input type="submit" value="Login" id="submit">
+                    <input type="submit" value="Login" id="submit" onclick="validate()">
                   </form>
 
 
@@ -80,6 +37,9 @@
     <footer>
         <p>&copy; Créé par quatre CNB3 - 2022</p>
     </footer>
+    <script>
+       
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js" integrity="sha512-MgkNs0gNdrnOM7k+0L+wgiRc5aLgl74sJQKbIWegVIMvVGPc1+gc1L2oK9Wf/D9pq58eqIJAxOonYPVE5UwUFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="js/function.js"></script> <!-- lien avec page function.js -->
     <script type="text/javascript" src="js/accueil.js"></script> <!-- lien avec page function.js -->

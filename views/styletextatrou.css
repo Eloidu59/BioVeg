@@ -40,20 +40,11 @@ SELECT
     color:white;
 }
 
-question{
-    flex : 1 0 45%;
-    width : 100px;
-    height : 30px;
-    border-radius : 5px;
-    cursor : pointer;
-    border : none;
-    margin : .2rem;
-    outline : none;
-    background : #285943;
-    user-select : none;
-    font-weight : 600;
-    transition-duration: .5s;
-    color:white;
+#question{
+    font-family: 'Exo', sans-serif;
+    margin-bottom : 2rem;
+    /*text-transform : uppercase;*/
+    font-size : 1.5rem;
 }
 
 #reponse
@@ -123,4 +114,14 @@ input
     width : 150px;
     height : 30px;
     border-radius : 5px;
+}
+
+#progress {
+    font-size : 1.3rem;
+    color : #285943;
+    font-weight: bold;
+    /*background: #A1CF6B;*/
+    border:4px solid #E0C879;
+    border-radius:.7rem;
+    padding:.5rem 1rem;
 }

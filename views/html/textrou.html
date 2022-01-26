@@ -5,23 +5,22 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="../styletextatrou.css">
         <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;200&family=Fira+Sans+Condensed:wght@200&family=Lobster+Two&family=Permanent+Marker&display=swap" rel="stylesheet">
-        <script language="javascript"> function liste(form5) {
-            if(form5.list.selectedIndex==1)
-            alert("Bonne réponse!");
-            else
-            alert("ERREUR ! Essaye encore"); }
-        </SCRIPT>
+        
     </head>
     
     <BODY>
 
         <div id="conteneur">
-            <p id="question"> <h3>La quantité de ... disponible est un facteur important dans la détermination de la structure et de la forme</h3></p>
+            <p id="question"> <h3></h3></p>
             
             <input type="texte" name="mot" maxlenght="10", id="reponse", autocomplete="off">
             
             <button id="boutonValider" > Valider </button>
+
+            <div class="progression"></div>
         </div>
+
+
         
 
     </BODY>
@@ -34,7 +33,15 @@
 
         
         
-        <!--<h3>La quantité de <FORM NAME="form5">
+        <!--
+        <script language="javascript"> function liste(form5) {
+            if(form5.list.selectedIndex==1)
+            alert("Bonne réponse!");
+            else
+            alert("ERREUR ! Essaye encore"); }
+        </SCRIPT>
+
+        <h3>La quantité de <FORM NAME="form5">
         <SELECT NAME="list">
             <OPTION VALUE="1">lumière
             <OPTION VALUE="2">eau

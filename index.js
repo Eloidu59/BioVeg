@@ -4,15 +4,13 @@ const app = express();
 //var server = app.listen(3000)
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
-
-
 //var io = require('socket.io').listen(server);
 //var socket=io.connect
 
 
 app.use(express.static(__dirname + '/views'));
 
-//connection à la BDD
+//connexion à la BDD
 
 var mysql = require('mysql')
 const con = mysql.createConnection({
