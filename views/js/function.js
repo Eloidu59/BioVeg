@@ -3,8 +3,18 @@
 
 
 
+const socket = io();
+
+socket.emit("chapitres")
+socket.on("retourchapitres",(chap)=>{
+  
+.innerHtml("<p>djzojzd</p>"+chap)
+});
+
 
 var mini=true;
+document.getElementById("sidebar").style.width = "30px";
+document.getElementById("main").style.marginLeft = "85px";
 function toggleSidebar() {
   if (mini) {
     document.getElementById("sidebar").style.width = "250px";

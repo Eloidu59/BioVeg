@@ -103,6 +103,8 @@ var timer= setInterval(function(){
   if(counter==0){
     setTimeout(function(){
      display.endQuiz();
+     timerElement.innerText="Dommage, le temps est écoulé ";
+     
      clearInterval(timer);
 
     },1000)
@@ -119,10 +121,9 @@ quizApp = () => {
     } 
 
     else if(counter==0){
-     //setTimeout(function(){
+    
       display.endQuiz();
-     // cle
-
+      
      
     }
     

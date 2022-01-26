@@ -27,33 +27,22 @@ con.connect(function(err) {
     
 
 io.on('connection', (socket) => {
-    console.log('connexion faite')
-    socket.on('chapitres',()=> {
     
+    socket.on('chapitres',()=> {
+        console.log('connexion faite');
     
         let requete= 'SELECT * FROM `themes`';
         
         con.query(requete, (err,chap)=>{
             if (err) throw err;
-            console.log(chap[1].nom)
+            
             socket.emit('retourchapitres',chap);
 
-            
-        });
+            console.log(chap[1].nom) //Gymnospermes
+       });
     }); 
 });
 
-
-
-io.on("connection", (socket) => {
-    socket.emit("hello", "world");
-    
-    
-    socket.on("hello", (arg) => {
-        console.log(arg); // world
-    });
-    
-});
 
 //connexion au serveur
 app.listen(3000, () => {

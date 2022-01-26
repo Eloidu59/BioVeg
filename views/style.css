@@ -103,6 +103,7 @@ body {
     transition-duration:.2s;
     text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
 }
+
 h1:hover{
     text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15),0 6px 0 #aaa,0 7px 0 #aaa,0 8px 0 #aaa,0 9px 0 #aaa,0 10px 0 #aaa,0 11px 0 #aaa;
     transition-duration:.2s;
@@ -126,38 +127,42 @@ footer {
   position: absolute;
   display: block;
   margin-top: 5rem;
-  width:100%;
+  width:99%;
 }
 
 
 a{
   text-decoration: none;
+  color: black;
 }
 
 
 
 /* POUR LA LISTE DE QUIZS */
-
+.qtext{
+  font-size:20px;
+}
 .listeQuizs {
-  display: flow-root;
-  margin : 3rem auto 3rem;
-  width : 500px;
+  display : flex;
+  flex-flow : column wrap;
+  margin: 3rem 0 1rem 0;
+ 
 }
 
-button {
-flex : 1 0 45%;
-width : 200px;
-height : 80px;
-border-radius : 5px;
-cursor : pointer;
-border : none;
-margin : .4rem;
-outline : none;
+.lqs {
+width : auto; /* largeur */
+height : auto; /* hauteur */
+border-radius: 10px 100px / 120px; /* bords de la boîte : arrondie... */
+cursor : pointer; /* pointeur de souris */
+border: none; /* pas de pordure spéciale */
+margin: .5rem 0; /* espace entre chaque boîte */
+outline: none; /* pas de grosse bordure extérieure */
 background : #285943;
-user-select : none;
-font-weight : 600;
-transition-duration: .5s;
 color:white;
+font-family: 'Exo', sans-serif;
+user-select : none;
+font-weight : 600; /* définit la graisse du texte */
+transition-duration: .5s;
 }
 
 .lqs:hover {
