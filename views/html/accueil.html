@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="~/lib/Font-Awesome/css/solid.min.css">
         <link rel="stylesheet" type="text/css" href="https://fontawesome.com/v5.15/icons/">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
     </head>
     
     
@@ -18,83 +19,69 @@
             <h2><i class="fas fa-bars"></i></h2>
                 <div class="category" id="dropAngio">
                     <a href="#" class="themes">Angiospermes</a>
-                    <div class="subthemesCtn" id="dropAngioCtn">
+                   <!---- <div class="subthemesCtn" id="dropAngioCtn">
                         <a class="subthemes" href="/quiz">Quizs</a>
                         <a class="subthemes" href="#">Mots croisés</a>
                         <a class="subthemes" href="#">Textes à trous</a>
                     </div><br>
+                -->
                 </div>
 
                 <div class="category" id="dropGymno">
-                    <a href="#" class="themes">Gymnospermes</a>
-                    <div class="subthemesCtn" id="dropGymnoCtn">
+                   <a href="#" class="themes">Gymnospermes</a>
+                   <!---- <div class="subthemesCtn" id="dropGymnoCtn">
                         <a class="subthemes" href="#">Quizs</a>
                         <a class="subthemes" href="#">Mots croisés</a>
                         <a class="subthemes" href="#">Textes à trous</a>
                     </div><br>
+                -->
                 </div>
 
                 <div class="category" id="dropFoug">
                     <a href="#" class="themes">Fougères</a>
-                    <div class="subthemesCtn" id="dropFougCtn">
+                 <!----   <div class="subthemesCtn" id="dropFougCtn">
                         <a class="subthemes" href="#">Quizs</a>
                         <a class="subthemes" href="#">Mots croisés</a>
                         <a class="subthemes" href="#">Textes à trous</a>
-                    </div><br>
+                    </div><br> 
+                -->
                 </div>
 
                 <div class="category" id="dropAn">
-                    <a href="/annales" class="themes">Annales</a>
+                    <a href="#" class="themes">Annales</a>
+                 <!----  <div class="subthemesCtn" id="dropAnCtn">
+                        <a class="subthemes" href="#">2020</a>
+                        <a class="subthemes" href="#">2021</a>
+                        <a class="subthemes" href="#">2022</a>
+                    </div><br>
+
+                -->
                 </div>
 
             </div>
-
-            <div id="main">
-
-                <p class="qtext"><a href="/"><h1> Vegeta'learn </h1></a></p>
-                <p class="qtext">Testez-vous sur nos différents quizs.</p>
-                <p class="qtext"> Faites-en plusieurs, entrainez-vous au maximum pour assurer la bonne note</p>
-                
-                <div class="listeQuizs">
-        
-                    <button id="" class="lqs">
-                        <p id="">Quiz n°1 : Les angiospermes blabla</p> <!-- clique de l'utilisateur, si c'est bon ou pas-->
-                    </button>
-        
-                    <button id="" class="lqs">
-                        <p id="">Quiz n°1 : Les angiospermes blabla</p>
-                    </button>
-        
-                    <button id="" class="lqs">
-                        <p id="">Quiz n°1 : Les angiospermes blabla</p>
-                    </button>
-        
-                    <button id="" class="lqs">
-                        <p id="">Quiz n°1 : Les angiospermes blabla</p>
-                    </button>
-    
-                </div>
-        </div>
-    </body>
-
-           
-
-
-
-
-
-
-
-
-
-            <footer>
-                <p>&copy; Créé par quatre CNB3 - 2022</p>
-            </footer>
             
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js" integrity="sha512-MgkNs0gNdrnOM7k+0L+wgiRc5aLgl74sJQKbIWegVIMvVGPc1+gc1L2oK9Wf/D9pq58eqIJAxOonYPVE5UwUFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <div id="main">
+                <div>
+                    <p> <h1> Vegeta'learn </h1> </p>
+                </div>
 
-            <script type="text/javascript" src="js/function.js"></script> <!-- pour la barre de navigation -->
+                <label>Entrez vos identifiants</label>
+
+                <form id="login-form">
+                    <input type="text" name="username" id="username" class="login-form-field" placeholder="Username">
+                    <input type="password" name="password" id="password" class="login-form-field" placeholder="Password">
+                    <input type="submit" value="Login" id="submit">
+                  </form>
 
 
-        </html>
-                
+            </div>
+        </body>
+    
+    <footer>
+        <p>&copy; Créé par quatre CNB3 - 2022</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js" integrity="sha512-MgkNs0gNdrnOM7k+0L+wgiRc5aLgl74sJQKbIWegVIMvVGPc1+gc1L2oK9Wf/D9pq58eqIJAxOonYPVE5UwUFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="js/function.js"></script> <!-- lien avec page function.js -->
+    <script type="text/javascript" src="js/accueil.js"></script> <!-- lien avec page function.js -->
+</html>
+        

@@ -1,8 +1,12 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+//var server = app.listen(3000)
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
+
+
+//var io = require('socket.io').listen(server);
 //var socket=io.connect
 
 
@@ -25,24 +29,6 @@ con.connect(function(err) {
 
 
     
-
-io.on('connection', (socket) => {
-    
-    socket.on('chapitres',()=> {
-        console.log('connexion faite');
-    
-        let requete= 'SELECT * FROM `themes`';
-        
-        con.query(requete, (err,chap)=>{
-            if (err) throw err;
-            
-            socket.emit('retourchapitres',chap);
-
-            console.log(chap[1].nom) //Gymnospermes
-       });
-    }); 
-});
-
 
 //connexion au serveur
 app.listen(3000, () => {
@@ -68,6 +54,48 @@ app.get("/quiz1", (request, response) => {
 app.get("/textrou", (request, response) => {
     response.sendFile(__dirname + "/views/html/textrou.html");
 
+});
+
+app.get("/accueil", (request, response) => {
+    response.sendFile(__dirname + "/views/html/accueil.html");
+
+});
+
+
+app.get("/annales", (request, response) => {
+    response.sendFile(__dirname + "/views/html/annales.html");
+
+});
+
+
+io.on('connection', (socket) => {
+    console.log('connexion faite');
+    
+    socket.on('chapitres',()=> {
+        console.log("l'user me demande les chapitres")
+        let requete1= 'SELECT * FROM `themes`';
+        
+        
+        con.query(requete1, (err,chap)=>{
+            if (err) throw err;
+            
+            socket.emit('retourchapitres',chap);
+
+            //console.log(chap[1].nom) //Gymnospermes test
+       });
+       
+    }); 
+
+    socket.on('typeExos',()=>{
+        let requete2= 'SELECT * FROM `type_exo`';
+        con.query(requete2, (err,chap)=>{
+            if (err) throw err;
+            
+            socket.emit('retourtypeExos',chap);
+
+
+       });
+    })
 });
 
 

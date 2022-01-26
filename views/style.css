@@ -176,3 +176,44 @@ background : #bcf17f;
 transform: scale(1.05);
 transition-duration : .1s;
 }
+
+
+#login-form {
+  align-self: flex-start;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.login-form-field::placeholder {
+  color: #3a3a3a;
+}
+
+.login-form-field {
+  border: none;
+  border-bottom: 1px solid #3a3a3a;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  outline: none;
+  padding: 0px 0px 5px 5px;
+}
+
+#submit {
+  width: 10%;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #285943;
+  cursor: pointer;
+  outline: none;
+}
+
+#submit:hover{
+  transform: scale(1.05);
+  background-color:#A1CF6B;
+}
+
+
+

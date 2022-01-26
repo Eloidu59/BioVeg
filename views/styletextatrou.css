@@ -56,6 +56,24 @@ question{
     color:white;
 }
 
+#reponse
+{
+    /*text-transform: lowercase;*/
+    flex : 1 0 45%;
+    width : 200px;
+    height : 30px;
+    border-radius : 5px;
+    cursor : pointer;
+    border : none;
+    margin : .2rem;
+    outline : none;
+    background : #7EA0B7;
+    user-select : none;
+    font-weight : 600;
+    transition-duration: .5s;
+    color:white;
+}
+
 OPTION
 {
     flex : 1 0 45%;

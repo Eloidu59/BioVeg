@@ -1,17 +1,28 @@
-//requete bdd
-
-
-
+const chapitre = document.getElementsByClassName("themes");
 
 const socket = io();
 
+//Pour faire afficher la navigation en dynamique
+
 socket.emit("chapitres")
-socket.on("retourchapitres",(chap)=>{
-  
-.innerHtml("<p>djzojzd</p>"+chap)
+/*socket.on("retourchapitres",(chap)=>{
+console.log(chap[0].nom)
+  /*const chapitre = document.getElementsByClassName("themes"); 
+  //pour coller ca dans les div ou le class est "themes"?
+  for(var i=0;i<=chap.lenght;i++){
+    var chapNom=chap[i].nom;
+    chapitre.innerHTML += "<a id='chap'"+i+">"+chapNom + "</a>";
+  }
+
+  const exercice=cdocument.getElementsByClassName("themes");
+  for(var i=0;i<=chap.lenght;i++){
+    var chapNom=chap[i].nom;
+    var lien="/"+chapNom;
+    chapitre.innerHTML += "<a href='"+lien+"'id='chap'"+i+">"+chapNom + "</a>";
+  } 
+
 });
-
-
+*/
 var mini=true;
 document.getElementById("sidebar").style.width = "30px";
 document.getElementById("main").style.marginLeft = "85px";
@@ -57,11 +68,3 @@ document.getElementById("dropFoug").addEventListener('mouseleave',()=>{
 });
 
 
-//Annales
-document.getElementById("dropAnCtn").style.display="none"
-document.getElementById("dropAn").addEventListener('mouseover',()=>{
-  document.getElementById("dropAnCtn").style.display="block"
-})
-document.getElementById("dropAn").addEventListener('mouseleave',()=>{
-  document.getElementById("dropAnCtn").style.display="none"
-});

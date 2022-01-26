@@ -19,9 +19,12 @@ let questions = [
 
     new Question("Le procambium est à l’origine de quel tissu primaire ?", ["Epiderme", "Xylème et phloème primaire", "Tissu fondamental", "Xylème et phloème secondaire"], "Xylème et phloème primaire"),
 
-    new Question("Que ne transporte pas le phloème ?", ["Sucres", "Lipides", "ARN", "Protides"], "Protides")
+    new Question("Que ne transporte pas le phloème ?", ["Sucres", "Lipides", "ARN", "Protides"], "Protides"),
     
-];
+    new Question("Par quoi est portée une fleur isolée ?", ["Un pédicelle", "Un pédoncule", "un réceptacle", "Une inflorescence"], "Un pédoncule" )
+  
+  ];
+  
 
 class Quiz {
 
@@ -92,7 +95,7 @@ const display = {
 // Timer
 
 var timerElement=document.getElementById("timer");
-var counter= 10;
+var counter= 30;
 
 var timer= setInterval(function(){
 
@@ -103,7 +106,7 @@ var timer= setInterval(function(){
   if(counter==0){
     setTimeout(function(){
      display.endQuiz();
-     timerElement.innerText="Dommage, le temps est écoulé ";
+     timerElement.innerText="Le temps est écoulé ";
      
      clearInterval(timer);
 
