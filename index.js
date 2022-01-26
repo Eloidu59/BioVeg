@@ -26,7 +26,7 @@ con.connect(function(err) {
     
 
 //Connexion a la BDD
-io.on('connection', (socket) => {
+/*io.on('connection', (socket) => {
     console.log('connexion faite')
     socket.on('chapitres',()=> {
     
