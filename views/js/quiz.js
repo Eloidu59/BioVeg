@@ -13,7 +13,7 @@ class Question {
 
 let questions = [
     
-    new Question("Quel est le premier organe qui émerge lors de la germination?", ["Racine","Feuille","Tige","Bourgeon"], "Racine"),
+    new Question("Quel est le premier organe qui émerge lors de la germination ?", ["Racine","Feuille","Tige","Bourgeon"], "Racine"),
 
     new Question("Parmi les réponses suivantes, lequel de ces méristèmes ne fait pas partie des méristèmes primaires ?", ["protoderme", "Procambium", "Cambium", "Méristème fondamental"], "Cambium"),
 
@@ -58,7 +58,7 @@ const display = {
 
     endQuiz: function() {
       endQuizHTML = `
-        <h1>Quiz terminé !</h1>
+        <h1><span>Q</span>uiz terminé !</h1>
         <h3> Votre score est de : ${quiz.score} / ${quiz.questions.length}</h3>`;
       this.elementShown("quiz", endQuizHTML);
     },
@@ -89,11 +89,44 @@ const display = {
     },
   };
 
+// Timer
+
+var timerElement=document.getElementById("timer");
+var counter= 10;
+
+var timer= setInterval(function(){
+
+  let minutes = parseInt(counter / 60, 10);
+  let secondes = parseInt(counter % 60, 10);
+  timerElement.innerText = minutes + ":" + secondes;
+  counter--;
+  if(counter==0){
+    setTimeout(function(){
+     display.endQuiz();
+     clearInterval(timer);
+
+    },1000)
+   }
+
+},1000)
+
+ 
+
 // Game logic
 quizApp = () => {
     if (quiz.hasEnded()) { // détermine quand le quiz est fini (teste si c'est true)
       display.endQuiz(); // on dit end quand le quiz est fini
-    } else { // sinon
+    } 
+
+    else if(counter==0){
+     //setTimeout(function(){
+      display.endQuiz();
+     // cle
+
+     
+    }
+    
+    else  { // sinon
       display.question(); // on veut afficher la question
       display.choices(); // les choix
       display.progress(); // le progress

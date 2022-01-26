@@ -3,6 +3,7 @@ const path = require('path');
 const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
+//var socket=io.connect
 
 
 app.use(express.static(__dirname + '/views'));
@@ -19,14 +20,13 @@ const con = mysql.createConnection({
 
 con.connect(function(err) {
     if (err) throw err;
-    console.log("Connected!");
+    console.log("Connection à la base de données!");
     });
 
 
     
 
-//Connexion a la BDD
-/*io.on('connection', (socket) => {
+io.on('connection', (socket) => {
     console.log('connexion faite')
     socket.on('chapitres',()=> {
     
@@ -47,13 +47,13 @@ con.connect(function(err) {
 
 io.on("connection", (socket) => {
     socket.emit("hello", "world");
-  });
-  
-  /* client-side
-  socket.on("hello", (arg) => {
-    console.log(arg); // world
-  });
-*/
+    
+    
+    socket.on("hello", (arg) => {
+        console.log(arg); // world
+    });
+    
+});
 
 //connexion au serveur
 app.listen(3000, () => {
@@ -67,6 +67,11 @@ app.get("/", (request, response) => {
 });
 
 app.get("/quiz", (request, response) => {
+    response.sendFile(__dirname + "/views/html/listeQuizs.html");
+
+});
+
+app.get("/quiz1", (request, response) => {
     response.sendFile(__dirname + "/views/html/quiz1.html");
 
 });
@@ -75,6 +80,8 @@ app.get("/textrou", (request, response) => {
     response.sendFile(__dirname + "/views/html/textrou.html");
 
 });
+
+
 
 
 

@@ -130,3 +130,44 @@ footer {
 }
 
 
+a{
+  text-decoration: none;
+}
+
+
+
+/* POUR LA LISTE DE QUIZS */
+
+.listeQuizs {
+  display: flow-root;
+  margin : 3rem auto 3rem;
+  width : 500px;
+}
+
+button {
+flex : 1 0 45%;
+width : 200px;
+height : 80px;
+border-radius : 5px;
+cursor : pointer;
+border : none;
+margin : .4rem;
+outline : none;
+background : #285943;
+user-select : none;
+font-weight : 600;
+transition-duration: .5s;
+color:white;
+}
+
+.lqs:hover {
+background : #A1CF6B;
+transform : scale(0.95);
+transition-duration : .5s;
+}
+
+.lqs:hover:active {
+background : #bcf17f;
+transform: scale(1.05);
+transition-duration : .1s;
+}
