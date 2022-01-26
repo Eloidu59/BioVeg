@@ -44,12 +44,14 @@ function questionSuivante () {
 boutonValider.onclick=function(){
     if (reponse.value.toLowerCase() === questRep[n].rep){ //pour gérer les problèmes de majuscule on transforme tout en minuscule avant le test
         reponse.value="BRAVO !";
-        setTimeout (questionSuivante, 1000);//on appelle la question suivante si la réponse est juste
     }
+        
     else {
         reponse.value = "Erreur :(";
     }
     setTimeout (function(){reponse.value=""}, 1000); //au bout de 2 secondes on remet la zone de saisi vierge
+    setTimeout (questionSuivante, 1000);//on appelle la question suivante si la réponse est juste
+    
 }
 
 //rogress=function() {
